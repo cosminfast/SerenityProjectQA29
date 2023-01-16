@@ -13,7 +13,7 @@ import org.fasttrackit.steps.RegisterSteps;
 
 
 @RunWith(SerenityRunner.class)
-public class RegisterTest {
+public class RegisterTest extends BaseTest {
 
     @Managed(uniqueSession = true)
     public WebDriver driver;

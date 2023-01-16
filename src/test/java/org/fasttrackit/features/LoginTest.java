@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class LoginTest {
+public class LoginTest extends BaseTest {
 
     @Managed(uniqueSession = true)
     public WebDriver driver;

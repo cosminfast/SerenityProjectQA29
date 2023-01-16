@@ -8,7 +8,7 @@ import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.LoginPage;
 import org.junit.Assert;
 
-public class LoginSteps extends ScenarioSteps {
+public class LoginSteps extends BaseSteps {
 
     private AccountPage accountPage;
     private HomePage homePage;
