@@ -7,6 +7,8 @@ import org.fasttrackit.pages.AccountPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.LoginPage;
 import org.junit.Assert;
+import utils.Messages;
+
 
 public class LoginSteps extends BaseSteps {
 
@@ -49,5 +51,10 @@ public class LoginSteps extends BaseSteps {
         typeUserEmail(email);
         typePassword(pass);
         clickLogin();
+    }
+
+    @Step
+    public void checkPasswordFieldRequired() {
+        Assert.assertEquals(Messages.THIS_IS_A_REQUIRED_FIELD, loginPage.getRequiredPasswordText());
     }
 }

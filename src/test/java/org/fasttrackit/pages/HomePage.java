@@ -18,6 +18,14 @@ public class HomePage extends BasePage {
     @FindBy(css="[title='Register']")
     private WebElementFacade registerLink;
 
+    @FindBy(id = "search")
+    private WebElementFacade searchField;
+
+    @FindBy(css = ".search-button")
+    private WebElementFacade searchButton;
+
+
+
 
     public void clickOnAccountButton(){
         clickOn(accountButton);
@@ -31,5 +39,21 @@ public class HomePage extends BasePage {
         clickOn(registerLink);
     }
 
+
+    public void setSearchField(String value){
+        typeInto(searchField, value);
+    }
+
+    public void clickSearchButton(){
+        clickOn(searchButton);
+    }
+
+    @FindBy(css=".top-link-cart")
+    private WebElementFacade cartlink;
+
+    public void clickOnCartLink(){
+        clickOnAccountButton();
+        clickOn(cartlink);
+    }
 
 }

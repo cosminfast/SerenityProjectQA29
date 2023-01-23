@@ -16,6 +16,10 @@ public class LoginPage extends BasePage{
     @FindBy(id = "send2")
     private WebElementFacade loginButton;
 
+    @FindBy(id = "advice-required-entry-pass")
+    private WebElementFacade requiredPasswordElement;
+
+
     public void setEmailField(String value){
         typeInto(emailField, value);
     }
@@ -26,6 +30,11 @@ public class LoginPage extends BasePage{
 
     public void clickLoginButton(){
         clickOn(loginButton);
+    }
+
+    public String getRequiredPasswordText() {
+        waitFor(requiredPasswordElement);
+        return requiredPasswordElement.getText();
     }
 
 }
